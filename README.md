@@ -2,8 +2,19 @@
 
 ## 声明
 
-> 该代码仓库及其中的应用仅作交流学习用。
+> 该代码仓库及其中的应用资源仅作交流学习用。
 > 其中用到的部分图片资源来自《英雄联盟》官网原画下载，如有侵权，请告知删除！
+
+## 使用
+> 皮肤插件
+> classpath "com.github.Zhupff.AppSkin:plugin:dev-SNAPSHOT"
+> apply plugin: zhupff.appskin.SkinPlugin (项目主工程中使用)
+> apply plugin: zhupff.appskin.SkinPackagePlugin (皮肤包工程中使用)
+> 功能核心 (需要开发者后续自行扩展)
+> implementation "com.github.Zhupff.AppSkin:core:dev-SNAPSHOT"
+> 功能实现 (包含功能核心，稍微实现并扩展了一点)
+> implementation "com.github.Zhupff.AppSkin:impl:dev-SNAPSHOT"
+> 更多内容可参考样例工程，后续会逐步完善文档。
 
 ## LICENSE
 
