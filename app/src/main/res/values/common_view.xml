@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="common_corner_radius" format="dimension"/>
+
+    <declare-styleable name="CommonLinearLayout">
+        <attr name="common_corner_radius"/>
+    </declare-styleable>
+
+    <declare-styleable name="CommonConstraintLayout">
+        <attr name="common_corner_radius"/>
+    </declare-styleable>
+</resources>

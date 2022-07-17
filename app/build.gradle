@@ -1,0 +1,37 @@
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-kapt"
+apply plugin: zhupff.appskin.SkinPlugin
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 21
+        applicationId "zhupff.appskin"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation ANDROIDX
+    implementation KOTLIN_KTX
+    implementation KOTLIN_STDLIB
+    implementation CONSTRAINT_LAYOUT
+    implementation MATERIAL
+    implementation LIFECYCLE_RUNTIME_KTX
+
+    implementation project(":impl")
+}

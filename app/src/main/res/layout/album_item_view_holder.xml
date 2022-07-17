@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="zhupff.appskin.R"/>
+    </data>
+
+    <zhupff.appskin.CommonConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:common_corner_radius="8dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="16:11">
+
+            <ImageView
+                android:id="@+id/iv_cover"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintDimensionRatio="16:9"
+                android:scaleType="centerCrop"
+                skinForegroundDrawable="@{R.drawable.akali}"
+                tools:src="@drawable/akali"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="@id/iv_cover"
+                app:layout_constraintEnd_toEndOf="@id/iv_cover"
+                app:layout_constraintTop_toBottomOf="@id/iv_cover"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="16:2"
+                android:paddingStart="8dp"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                skinTextColor="@{R.color.text_color}"
+                skinBackgroundColor="@{R.color.background_color}"
+                tools:textColor="@color/text_color"
+                tools:background="@color/background_color"
+                tools:text="Album 1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </zhupff.appskin.CommonConstraintLayout>
+</layout>
