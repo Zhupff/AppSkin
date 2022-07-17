@@ -16,8 +16,8 @@ allprojects {
         mavenCentral()
         maven { url "https://jitpack.io" }
     }
-    group = "com.github.Zhupff.AppSkin"
-    version = "dev-SNAPSHOT"
+    group = GROUP
+    version = VERSION
 }
 
 task clean(type: Delete) {

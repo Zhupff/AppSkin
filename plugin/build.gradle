@@ -15,11 +15,11 @@ afterEvaluate {
             it.mavenLocal()
         }
         publications {
-            maven(MavenPublication) {
+            jitpack(MavenPublication) {
                 from components.java
-                groupId = group
-                artifactId = name
-                version = version
+                groupId = GROUP
+                artifactId = project.name
+                version = VERSION
             }
         }
     }
