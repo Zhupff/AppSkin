@@ -1,0 +1,48 @@
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-kapt"
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 21
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation ANDROIDX
+    implementation KOTLIN_KTX
+    implementation KOTLIN_STDLIB
+    api project(":core")
+}
+
+apply plugin: "maven-publish"
+afterEvaluate {
+    publishing {
+        repositories {
+            it.mavenLocal()
+        }
+        publications {
+            maven(MavenPublication) {
+                from components.release
+                groupId = group
+                artifactId = name
+                version = version
+            }
+        }
+    }
+}

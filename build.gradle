@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        classpath BUILD_GRADLE
+        classpath KOTLIN_GRADLE
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+    group = "com.github.Zhupff.AppSkin"
+    version = "dev-SNAPSHOT"
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

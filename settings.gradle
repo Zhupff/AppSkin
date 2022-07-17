@@ -1,0 +1,5 @@
+rootProject.name = "AppSkin"
+include ":app", ":app:skin1", ":app:skin2", ":app:skin3", ":app:skin4"
+include ":plugin"
+include ":core"
+include ":impl"

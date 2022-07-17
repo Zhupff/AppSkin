@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="zhupff.appskin.R"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:background="#fff">
+
+        <TextView
+            android:id="@+id/tv_list_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"
+            android:text="This's Music List Title."
+            android:textSize="14sp"
+            skinTextColor="@{R.color.text_color}"
+            tools:textColor="@color/text_color"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/music_item_layout">
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                skinTextColor="@{R.color.outline_color}"
+                tools:textColor="@color/outline_color"
+                tools:text="1234"/>
+
+            <View
+                android:id="@+id/iv_more"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/icon_more"
+                skinBackgroundTint="@{R.color.outline_color}"
+                tools:backgroundTint="@color/outline_color"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/tv_number"
+                app:layout_constraintEnd_toStartOf="@id/iv_more"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_margin="8dp">
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="This's Music Name."
+                    skinTextColor="@{R.color.text_color}"
+                    tools:textColor="@color/text_color"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_favorite"
+                        skinForegroundTint="@{R.color.main_color}"
+                        tools:tint="@color/main_color"/>
+                    <TextView
+                        android:id="@+id/tv_sub_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="12sp"
+                        android:text="This is sub description."
+                        skinTextColor="@{R.color.text_color}"
+                        tools:textColor="@color/text_color"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider_line"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                app:layout_constraintStart_toEndOf="@id/tv_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                skinBackgroundColor="@{R.color.outline_color}"
+                tools:background="@color/outline_color"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</layout>
