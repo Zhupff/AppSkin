@@ -2,12 +2,11 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven { url "https://jitpack.io" }
     }
     dependencies {
         classpath BUILD_GRADLE
         classpath KOTLIN_GRADLE
-        classpath "com.github.Zhupff.AppSkin:plugin:dev-SNAPSHOT"
+        classpath fileTree(dir: "./gradle/maven", includes: ["*.jar"])
     }
 }
 
@@ -15,7 +14,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven { url "https://jitpack.io" }
     }
     group = GROUP
     version = VERSION
